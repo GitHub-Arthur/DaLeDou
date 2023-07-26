@@ -1322,7 +1322,7 @@ def 增强经脉():
     '''
     # 经脉
     get('cmd=intfmerid&sub=1')
-    for _ in range(12):
+    for _ in range(3):
         for id in findall(r'master_id=(\d+)">传功</a>'):
             if '关闭' in HTML:
                 # 关闭合成两次确认
@@ -2016,7 +2016,7 @@ def 背包():
         # 属性、锦囊
         get(f'cmd=store&store_type={t}&page=1')
         for number, id in findall(r'数量：(\d+).*?id=(\d+).*?使用'):
-            if id in ['3023', '3024', '3025', '3103']:
+            if id in ['3004', '3016', '3017', '3018', '3023', '3024', '3025', '3103', '3218', '3219', '3220', '3410', '3411', '3412']:
                 # xx洗刷刷
                 continue
             for _ in range(int(number)):
